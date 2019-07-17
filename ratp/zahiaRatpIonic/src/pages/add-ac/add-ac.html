@@ -1,0 +1,43 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>addAC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="acForm" (ngSubmit)="submitForm()">
+
+  <ion-list>
+      
+      <ion-item>
+        <ion-input type="number" placeholder="Le matricule de l'agent" formControlName="matricule_agents">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label>Date validation AC</ion-label>
+        <ion-input type="date" formControlName="dates_validation_AC"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-textarea placeholder="Commentaire de l'AC" formControlName="commentaire_AC"></ion-textarea>
+      </ion-item>
+  
+  </ion-list>
+
+    <div>
+    <button type="submit" ion-button color="secondary" block>Valider</button>
+    </div>
+
+  </form>
+
+</ion-content>

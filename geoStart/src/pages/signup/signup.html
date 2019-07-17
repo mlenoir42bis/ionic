@@ -1,0 +1,37 @@
+<ion-content padding class="background">
+  <ion-card>
+    <ion-card-content>
+      <ion-list no-lines>
+        <div class="spacer" style="height: 10px;"></div>
+
+        <form [formGroup]="authForm" (ngSubmit)="submitForm(authForm.value)">
+
+          <ion-item>
+            <ion-input type="email" placeholder="Email" [(ngModel)]="credentials.email" [formControl]="authForm.controls['email']" [ngClass]="{'error-border':!authForm.controls['email'].valid}"></ion-input>
+          </ion-item>
+
+          <div class="error-box" *ngIf="authForm.controls['email'].hasError('required') && authForm.controls['email'].touched">* Email is required!</div>
+          <div class="error-box" *ngIf="authForm.controls['email'].hasError('email') && authForm.controls['email'].touched">* The format of the email is incorrect !</div>
+          
+
+          <div class="spacer" style="height: 5px;"></div>
+
+          <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="credentials.password" [formControl]="authForm.controls['password']" [ngClass]="{'error-border':!authForm.controls['password'].valid}"></ion-input>
+          </ion-item>
+    
+          <div class="error-box" *ngIf="authForm.controls['password'].hasError('required') && authForm.controls['password'].touched">* Password is required!</div>
+    
+          <div class="spacer" style="height: 10px;"></div>
+    
+          <button ion-button block round outline color="light" [disabled]="!authForm.valid">Signup</button>
+        
+        </form>
+        
+          <div class="spacer" style="height: 10px;"></div>
+        <button ion-button clear full color="light" (click)="signin()">Retour login page</button>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

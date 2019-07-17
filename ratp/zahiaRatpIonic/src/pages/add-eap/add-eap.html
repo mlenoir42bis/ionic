@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>addEAP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="eapForm" (ngSubmit)="submitForm()">
+
+
+  <ion-list>
+    
+    <ion-item>
+      <ion-input type="number" placeholder="Matricule de l'agent" formControlName="matricule_agents">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>derniere date EAP</ion-label>
+      <ion-input type="date" placeholder="derniere date EAP" formControlName="derniere_date_EAP">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>prochaine date EAP</ion-label>
+      <ion-input type="date" placeholder="prochaine date EAP" formControlName="prochaine_date_EAP">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="commentaire EAP" formControlName="commentaire_EAP">
+      </ion-textarea>
+    </ion-item>
+
+
+  </ion-list>
+
+  <div>
+    <button type="submit" ion-button color="primary" block>Valider</button>
+  </div>
+
+</form>
+
+</ion-content>

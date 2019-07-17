@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>addFollowed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="followedForm" (ngSubmit)="submitForm()">
+
+  <ion-list>
+
+        <ion-item>
+          <ion-input type="number" placeholder="Le matricule de l'agent" formControlName="matricule_agents">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Le suivi</ion-label>
+          <ion-input type="date" formControlName="dates_suivi">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Prochain suivi</ion-label>
+          <ion-input type="date" formControlName="prochaine_date_suivi"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="textarea" placeholder="Commentaire du suivi" formControlName="commentaire_suivi"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <div>
+    <button type="submit" ion-button color="secondary" block>Valider</button>
+    </div>
+
+  </form>
+
+</ion-content>

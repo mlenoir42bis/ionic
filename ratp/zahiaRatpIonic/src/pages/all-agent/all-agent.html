@@ -1,0 +1,88 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card *ngFor="let data of datas">
+    <ion-card-header text-center>
+      {{ data.matricule_agents }}
+      {{ data.nom_agents }}
+    </ion-card-header>
+    <ion-card-content text-center>
+      <ion-list>
+        <ion-item>
+          <ion-label> Matricule : {{ data.matricule_agents }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Nom : {{ data.nom_agents }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Date Permis : {{ data.date_validite_permis }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Date FCO : {{ data.date_validite_FCO }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Date suivi : {{ data.dates_suivi }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Prochaine date suivi : {{ data.prochaine_date_suivi }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Commentaire suivi : {{ data.commentaire_suivi }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Derniere date EAP : {{ data.derniere_date_EAP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Prochaine date EAP : {{ data.prochaine_date_EAP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Commentaire EAP : {{ data.commentaire_EAP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Dates validation AC : {{ data.dates_validation_AC }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Commentaire AC : {{ data.commentaire_AC }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> date ouverture PP : {{ data.date_ouverture_PP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> date cloture PP : {{ data.date_cloture_PP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> commentaire PP : {{ data.commentaire_PP }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Total jours absence : {{ data.total_jours_absences }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> jour réaccueil : {{ data.jour_reaccueil }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> commentaire réaccueil : {{ data.commentaire_reaccueil }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div>
+        <button ion-button color="secondary" block (click)="myUpdate(data.matricule_agents)">modifier</button>
+        <button ion-button color="danger" block (click)="myDelete(data.matricule_agents)" >suppression</button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,55 @@
+
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>addAgent</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <form [formGroup]="agentForm" (ngSubmit)="submitForm()">
+
+  <ion-list>
+    <ion-item>
+      <ion-input type="number" placeholder="Matricule de l'agent" formControlName="matricule_agents">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nom de l'agent" formControlName="nom_agents"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Permis</ion-label>
+      <ion-input type="date" formControlName="date_validite_permis"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>FCE</ion-label>
+      <ion-input type="date" formControlName="date_validite_FCO"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input type="number" placeholder="Matricule de son REL" formControlName="matricule_REL">
+        </ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Le site de l'agent" formControlName="nom_site"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+    <button type="submit" ion-button color="secondary" block>Valider</button>
+  </div>
+
+</form>
+
+</ion-content>

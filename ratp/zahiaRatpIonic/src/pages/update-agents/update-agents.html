@@ -1,0 +1,94 @@
+<!--
+  Generated template for the UpdateAgentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>update_agents</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="updAgentForm" (ngSubmit)="submitForm()">
+
+      <ion-list>
+          <ion-item>
+              <ion-label>Date de validité du permis</ion-label>
+              <ion-input type="date" formControlName="date_validite_permis"></ion-input>
+            </ion-item>
+          <ion-item>
+              <ion-label>Date de validité du FCO</ion-label>
+            <ion-input type="date" formControlName="date_validite_FCO"></ion-input>
+          </ion-item>
+           <ion-item>
+              <ion-input type="text" placeholder="site de l'agent" formControlName="nom_site"></ion-input>
+           </ion-item>
+          <ion-item>
+            <ion-label>Date de validité du suivi</ion-label>
+            <ion-input type="date" formControlName="dates_suivi"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Prochaine-date-suivi</ion-label>
+              <ion-input type="date" formControlName="prochaine_date_suivi"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Commentaire-suivi" formControlName="commentaire_suivi"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Dérnière-date-EAP</ion-label>
+              <ion-input type="date" formControlName="derniere_date_EAP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Prochaine_date_EAP</ion-label>
+              <ion-input type="date" formControlName="prochaine_date_EAP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Commentaire_EAP" formControlName="commentaire_EAP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Date-validation-AC</ion-label>
+              <ion-input type="date" formControlName="dates_validation_AC"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Commentaire-AC" formControlName="commentaire_AC"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Ouverture-PP</ion-label>
+              <ion-input type="date" formControlName="date_ouverture_PP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Cloture-PP</ion-label>
+              <ion-input type="date" formControlName="date_cloture_PP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Commentaire-PP" formControlName="commentaire_PP"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="number" placeholder="Total-jours-absences de l'agent" formControlName="total_jours_absences"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Jour du réaccueil de l'agent</ion-label>
+              <ion-input type="date" formControlName="jour_reaccueil"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Commentaire du reaccueil" formControlName="commentaire_reaccueil"></ion-input>
+          </ion-item>
+        </ion-list>
+      
+        <div>
+          <button type="submit" ion-button color="secondary" block>Valider la modification</button>
+        </div>
+      
+      </form>
+
+  </ion-content>

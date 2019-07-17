@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>RATP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+<ion-item>
+  <ion-label floating>compte matriculaire</ion-label>
+  <ion-input type="text" name="login"[(ngModel)]="login"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>mot de passe</ion-label>
+  <ion-input type="password" name="password"[(ngModel)]="password"></ion-input>
+</ion-item>
+
+</ion-list>
+<div>
+<button ion-button color="primary" block (click)="SignIn()">Connexion</button>
+<button ion-button color="secondary" block (click)="formRegister()">Inscription</button>
+
+</div>
+
+<ion-footer padding text-center>
+<h6>Bienvenue sur L'application "AgentsPASO" RATP</h6>
+</ion-footer>
+
+</ion-content>
